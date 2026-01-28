@@ -1,4 +1,4 @@
-# PatentWriter
+# PatentAid
 A Microsoft Word Add-in to empower law gods to patent with the best of 'em. Implemented with Office.js, scaffolding generated via [MS Yeoman Generator](https://learn.microsoft.com/en-us/office/dev/add-ins/develop/yeoman-generator-overview).
 
 ![](https://github.com/RockReuben/PatentAid/blob/main/gif.gif)
