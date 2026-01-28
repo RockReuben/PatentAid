@@ -4,6 +4,11 @@ const devCerts = require("office-addin-dev-certs");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const dotenv = require("dotenv");
+const path = require("path");
+
+// Load environment variables from .env.local
+dotenv.config({ path: path.resolve(__dirname, ".env.local") });
 
 const urlDev = "https://localhost:3000/";
 const urlProd = "https://www.contoso.com/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
@@ -92,6 +97,9 @@ module.exports = async (env, options) => {
       }),
       new webpack.ProvidePlugin({
         Promise: ["es6-promise", "Promise"],
+      }),
+      new webpack.DefinePlugin({
+        "process.env.OPENAI_API_KEY": JSON.stringify(process.env.OPENAI_API_KEY),
       }),
     ],
     devServer: {
