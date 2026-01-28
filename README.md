@@ -45,22 +45,7 @@ Attach reference files (one-pagers, specs) to provide context for all prompts.
 
 **Flow:** `FileReader.readAsText() → Store in uploadedFiles[] → Prepend to prompt as [REFERENCE FILES] block`
 
-
-## Architecture
-
-```
-src/taskpane/
-├── components/
-│   ├── App.tsx              # Root component
-│   ├── PromptPane.tsx       # Main chat UI, file uploads, message display
-│   └── ChangeReviewer.tsx   # Track changes navigation & accept/reject
-├── services/
-│   ├── openai.ts            # OpenAI API calls and response parsing
-│   └── word.ts              # Word document operations (insert, replace, track changes)
-└── index.tsx                
-```
-
-## Key Files
+## Files of note
 
 | File | Purpose |
 |------|---------|
